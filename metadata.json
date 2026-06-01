@@ -1,5 +1,6 @@
 {
   "description": "Elite professional football analytics and streaming portal.",
   "requestFramePermissions": [],
-  "name": "OPTATV+ "
+  "name": "OPTATV+ ",
+  "majorCapabilities": []
 }

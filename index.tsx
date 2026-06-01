@@ -27,6 +27,15 @@ const COMPETITIONS: readonly LeagueConfig[] = [
         link: "https://www.premierleague.com/en/"
     },
     {
+        id: "worldcup",
+        name: "FIFA World Cup 2026",
+        shortName: "WC 2026",
+        icon: "fa-earth-americas",
+        logoUrl: "https://upload.wikimedia.org/wikipedia/commons/a/aa/FIFA_World_Cup_2026_logo.svg",
+        color: "from-blue-950 via-slate-900 to-black",
+        link: "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026"
+    },
+    {
         id: "laliga",
         name: "La Liga",
         shortName: "La Liga",
@@ -52,15 +61,6 @@ const COMPETITIONS: readonly LeagueConfig[] = [
         logoUrl: "https://upload.wikimedia.org/wikipedia/en/d/df/Bundesliga_logo_%282017%29.svg",
         color: "from-red-900 to-red-950",
         link: "https://www.bundesliga.com/en/bundesliga/table"
-    },
-    {
-        id: "worldcup",
-        name: "FIFA World Cup 2026",
-        shortName: "WC 2026",
-        icon: "fa-earth-americas",
-        logoUrl: "https://upload.wikimedia.org/wikipedia/commons/a/aa/FIFA_World_Cup_2026_logo.svg",
-        color: "from-blue-950 via-slate-900 to-black",
-        link: "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026"
     },
     {
         id: "afcon",
@@ -233,10 +233,10 @@ const LANGUAGES = [
     { code: "de", name: "Deutsch", region: "Deutschland" },
 ];
 
-const HOT_MATCH_LINK = "https://www.camel1.live/q/home/hotmatch";
+const HOT_MATCH_LINK = "https://streamseast.cc/soccer";
 const GOOGLE_NEWS_TOPIC_LINK = "https://news.google.com/topics/CAAqJQgKIh9DQkFTRWVvSUwyMHZNREoyZURRU0JXVnVMVWRDS0FBUAE?hl=en-ET&gl=ET&ceid=ET%3Aen";
 const OPTA_ANALYST_LINK = "https://theanalyst.com";
-const POWER_RANKINGS_LINK = "https://theanalyst.com/competition/uefa-champions-league/power-rankings";
+const POWER_RANKINGS_LINK = "https://theanalyst.com/competition/premier-league/stats?utm_source=website&utm_medium=topbanner&utm_campaign=embed";
 const XG_MATRIX_LINK = "https://theanalyst.com/?s=XG&orderby=date%3ADESC&cat=23&post_type=post";
 const INSTAGRAM_SUPPORT_LINK = "https://www.instagram.com/menkirwolde?igsh=MTY4Nmh1N2FtMHVrNg==";
 const TARGET_GMAIL = "mon14yee@gmail.com";
@@ -261,6 +261,38 @@ const IntelligenceFrame: React.FC<{ title?: string; icon?: string; children: Rea
 
 const LeagueItem: React.FC<{ league: LeagueConfig }> = ({ league }) => {
     const [imgError, setImgError] = useState(false);
+    
+    if (league.id === "worldcup") {
+        return (
+            <a
+                href={league.link}
+                target="_blank"
+                rel="noreferrer"
+                className="flex-shrink-0 w-32 h-28 rounded-3xl bg-gradient-to-br from-amber-200 via-amber-500 to-yellow-700 relative overflow-hidden group cursor-pointer border-2 border-amber-300 hover:border-yellow-100 transition-all hover:scale-110 hover:-translate-y-1 shadow-[0_10px_30px_rgba(245,158,11,0.4)] flex flex-col items-center justify-between p-4 px-5 z-20"
+            >
+                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/gold-scale.png')] opacity-20 mix-blend-overlay"></div>
+                <div className="absolute -inset-1/2 bg-gradient-to-r from-transparent via-white/50 to-transparent w-[200%] rotate-45 translate-x-[-150%] group-hover:animate-[shimmer_2s_infinite] pointer-events-none"></div>
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
+                
+                <div className="absolute top-0 right-0 w-8 h-8 bg-black/40 rounded-bl-xl backdrop-blur-sm flex items-center justify-center border-b border-l border-amber-300/30">
+                    <i className="fa-solid fa-star text-[10px] text-amber-300 animate-pulse"></i>
+                </div>
+
+                {!imgError ? (
+                    <img 
+                        src={league.logoUrl} 
+                        alt={league.name} 
+                        className="w-16 h-16 object-contain drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] group-hover:scale-110 transition-transform duration-500 relative z-10"
+                        onError={() => setImgError(true)}
+                    />
+                ) : (
+                    <i className={`fa-solid ${league.icon} text-4xl text-white relative z-10 drop-shadow-[0_4px_10px_rgba(0,0,0,0.5)]`}></i>
+                )}
+                <span className="text-[11px] font-black text-black mt-auto uppercase tracking-widest relative z-10 text-center leading-tight drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">{league.shortName}</span>
+            </a>
+        );
+    }
+
     return (
         <a
             href={league.link}
@@ -348,11 +380,13 @@ const OptaTab: React.FC = () => {
             <div className="px-4 md:px-6 space-y-6 md:space-y-8 relative z-10">
                 <IntelligenceFrame title="Performance Model" icon="fa-microchip">
                     <div 
-                        onClick={() => window.open(POWER_RANKINGS_LINK, "_blank")}
+                        onClick={() => window.open("https://theanalyst.com/", "_blank")}
                         className="bg-slate-900/40 backdrop-blur-md border border-white/10 rounded-[2.2rem] md:rounded-[3.2rem] p-0.5 md:p-1 shadow-3xl relative overflow-hidden group/terminal cursor-pointer hover:border-[var(--primary-color)]/40 transition-all duration-500"
                     >
                         <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary-color)]/10 via-transparent to-transparent opacity-0 group-hover/terminal:opacity-100 transition-opacity"></div>
                         <div className="relative z-10 bg-slate-950/70 rounded-[2.1rem] md:rounded-[3.1rem] p-6 md:p-10 border border-white/5">
+                            <a href="https://theanalyst.com/" className="hidden" aria-hidden="true" tabIndex={-1}>https://theanalyst.com/</a>
+                            
                             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 md:mb-12">
                                 <div className="flex items-center gap-4 md:gap-5">
                                     <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-[var(--primary-color)]/20 flex items-center justify-center border border-[var(--primary-color)]/30 shadow-[0_0_20px_rgba(var(--primary-rgb),0.2)]">
@@ -466,9 +500,11 @@ const NewsTab: React.FC = () => {
 
                 <IntelligenceFrame title="Hub Network" icon="fa-satellite-dish">
                     <div 
-                        onClick={() => window.open(GOOGLE_NEWS_TOPIC_LINK, "_blank")}
+                        onClick={() => window.open("https://www.livescore.com/en/news/football/", "_blank")}
                         className="group/news-hub relative w-full aspect-[4/3] md:aspect-[21/9] bg-slate-900/60 backdrop-blur-2xl border border-white/10 rounded-[2rem] md:rounded-[3rem] overflow-hidden cursor-pointer hover:border-[var(--primary-color)]/30 transition-all duration-700 shadow-3xl"
                     >
+                        <a href="https://www.livescore.com/en/news/football/" className="hidden" aria-hidden="true" tabIndex={-1}>https://www.livescore.com/en/news/football/</a>
+                        
                         <div className="absolute inset-0 opacity-10 pointer-events-none">
                             <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
                         </div>
