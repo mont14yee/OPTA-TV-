@@ -19,21 +19,30 @@ interface LeagueConfig {
 const COMPETITIONS: readonly LeagueConfig[] = [
     {
         id: "epl",
-        name: "Premier League",
-        shortName: "EPL",
+        name: "English Premier League",
+        shortName: "Premier League",
         icon: "fa-crown",
-        logoUrl: "https://upload.wikimedia.org/wikipedia/en/f/f2/Premier_League_Logo.svg",
+        logoUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Premier_League_Logo.svg/1200px-Premier_League_Logo.svg.png",
         color: "from-purple-900 to-fuchsia-900",
-        link: "https://www.premierleague.com/en/"
+        link: "https://www.premierleague.com/"
     },
     {
-        id: "worldcup",
-        name: "FIFA World Cup 2026",
-        shortName: "WC 2026",
-        icon: "fa-earth-americas",
-        logoUrl: "https://upload.wikimedia.org/wikipedia/commons/a/aa/FIFA_World_Cup_2026_logo.svg",
-        color: "from-blue-950 via-slate-900 to-black",
-        link: "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026"
+        id: "ucl",
+        name: "European Champions League",
+        shortName: "UCL",
+        icon: "fa-trophy",
+        logoUrl: "https://upload.wikimedia.org/wikipedia/en/b/bf/UEFA_Champions_League_logo_2.svg",
+        color: "from-blue-900 to-indigo-950",
+        link: "https://www.uefa.com/uefachampionsleague/"
+    },
+    {
+        id: "seriea",
+        name: "Italian Serie A",
+        shortName: "Serie A",
+        icon: "fa-shield-halved",
+        logoUrl: "https://upload.wikimedia.org/wikipedia/commons/e/e9/Serie_A_logo_2022.svg",
+        color: "from-blue-800 to-cyan-900",
+        link: "https://www.legaseriea.it/en"
     },
     {
         id: "laliga",
@@ -45,175 +54,31 @@ const COMPETITIONS: readonly LeagueConfig[] = [
         link: "https://www.laliga.com/en-GB"
     },
     {
-        id: "seriea",
-        name: "Serie A",
-        shortName: "Serie A",
-        icon: "fa-shield-halved",
-        logoUrl: "https://upload.wikimedia.org/wikipedia/commons/e/e9/Serie_A_logo_2022.svg",
-        color: "from-blue-800 to-cyan-900",
-        link: "https://www.legaseriea.it/en"
-    },
-    {
         id: "bundesliga",
         name: "Bundesliga",
-        shortName: "GER",
+        shortName: "Bundesliga",
         icon: "fa-certificate",
         logoUrl: "https://upload.wikimedia.org/wikipedia/en/d/df/Bundesliga_logo_%282017%29.svg",
         color: "from-red-900 to-red-950",
         link: "https://www.bundesliga.com/en/bundesliga/table"
     },
     {
-        id: "afcon",
-        name: "Africa Cup of Nations 2025",
-        shortName: "AFCON 25",
-        icon: "fa-earth-africa",
-        logoUrl: "https://upload.wikimedia.org/wikipedia/en/f/f6/2025_Africa_Cup_of_Nations_logo.png",
-        color: "from-orange-600 via-green-800 to-red-900",
-        link: "https://www.cafonline.com/caf-africa-cup-of-nations/"
+        id: "ligue1",
+        name: "French Ligue 1",
+        shortName: "Ligue 1",
+        icon: "fa-hexagon",
+        logoUrl: "https://upload.wikimedia.org/wikipedia/commons/5/5e/Ligue1_McDonald%27s_logo.svg",
+        color: "from-lime-900 to-emerald-950",
+        link: "https://www.ligue1.com/"
     },
     {
-        id: "ucl",
-        name: "UEFA Champions League",
-        shortName: "UCL",
-        icon: "fa-trophy",
-        logoUrl: "https://upload.wikimedia.org/wikipedia/en/b/bf/UEFA_Champions_League_logo_2.svg",
-        color: "from-blue-900 to-indigo-950",
-        link: "https://www.uefa.com/uefachampionsleague/"
-    },
-    {
-        id: "mls",
-        name: "Major League Soccer",
-        shortName: "MLS",
-        icon: "fa-flag-usa",
-        logoUrl: "https://upload.wikimedia.org/wikipedia/commons/7/76/MLS_crest_logo_RGB_gradient.svg",
-        color: "from-blue-900 to-red-900",
-        link: "https://www.mlssoccer.com/"
-    },
-    {
-        id: "lp-arg",
-        name: "Liga Profesional Argentina",
-        shortName: "LPA",
-        icon: "fa-sun",
-        logoUrl: "https://upload.wikimedia.org/wikipedia/commons/e/e0/Logo_Liga_Profesional_de_F%C3%BAtbol_de_Argentina.png",
-        color: "from-sky-400 via-sky-100 to-sky-700",
-        link: "https://www.ligaprofesional.ar/"
-    },
-    {
-        id: "brasileirao",
-        name: "Brazilian Serie A",
-        shortName: "BRA",
-        icon: "fa-star",
-        logoUrl: "https://upload.wikimedia.org/wikipedia/en/f/f8/Campeonato_Brasileiro_S%C3%A9rie_A_logo.svg",
-        color: "from-green-600 to-yellow-500",
-        link: "https://www.cbf.com.br/futebol-brasileiro/competicoes/campeonato-brasileiro-serie-a"
-    },
-    {
-        id: "superlig",
-        name: "Turkish Super Lig",
-        shortName: "TUR",
-        icon: "fa-moon",
-        logoUrl: "https://upload.wikimedia.org/wikipedia/en/c/ca/S%C3%BCper_Lig_logo.svg",
-        color: "from-red-600 via-red-700 to-red-900",
-        link: "https://www.tff.org/"
-    },
-    {
-        id: "eredivisie",
-        name: "Dutch Eredivisie",
-        shortName: "ERE",
-        icon: "fa-wind",
-        logoUrl: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Eredivisie_logo.svg",
-        color: "from-blue-600 to-orange-500",
-        link: "https://eredivisie.nl/"
-    },
-    {
-        id: "pro-league",
-        name: "Belgian Pro League",
-        shortName: "BEL",
-        icon: "fa-shield-halved",
-        logoUrl: "https://upload.wikimedia.org/wikipedia/en/e/e8/Jupiler_Pro_League_logo.svg",
-        color: "from-black via-slate-900 to-red-600",
-        link: "https://www.proleague.be/"
-    },
-    {
-        id: "superliga-dk",
-        name: "Danish Superligaen",
-        shortName: "DAN",
-        icon: "fa-shield",
-        logoUrl: "https://upload.wikimedia.org/wikipedia/en/c/cb/Superliga_%28Denmark%29_logo.svg",
-        color: "from-red-600 via-red-500 to-slate-200",
-        link: "https://superliga.dk/"
-    },
-    {
-        id: "saudi-pro",
-        name: "Saudi Pro League",
-        shortName: "SPL",
-        icon: "fa-palm-tree",
-        logoUrl: "https://upload.wikimedia.org/wikipedia/en/0/00/Saudi_Pro_League_logo.svg",
-        color: "from-green-700 to-emerald-900",
-        link: "https://spl.com.sa/"
-    },
-    {
-        id: "primeira-liga",
-        name: "Portuguese Primeira Liga",
-        shortName: "POR",
-        icon: "fa-anchor",
-        logoUrl: "https://upload.wikimedia.org/wikipedia/en/0/0e/Liga_Portugal_logo.svg",
-        color: "from-blue-800 to-green-700",
-        link: "https://www.ligaportugal.pt/"
-    },
-    {
-        id: "rpl",
-        name: "Russian Premier League",
-        shortName: "RUS",
-        icon: "fa-bear",
-        logoUrl: "https://upload.wikimedia.org/wikipedia/en/f/f6/Russian_Premier_League_logo.svg",
-        color: "from-red-600 via-white to-blue-800",
-        link: "https://premierliga.ru/"
-    },
-    {
-        id: "eliteserien",
-        name: "Norwegian Eliteserien",
-        shortName: "NOR",
-        icon: "fa-mountain",
-        logoUrl: "https://upload.wikimedia.org/wikipedia/en/c/cf/Eliteserien_logo.svg",
-        color: "from-blue-900 to-red-700",
-        link: "https://www.eliteserien.no/"
-    },
-    {
-        id: "super-league-gr",
-        name: "Greek Super League",
-        shortName: "GRE",
-        icon: "fa-landmark",
-        logoUrl: "https://upload.wikimedia.org/wikipedia/en/f/fe/Super_League_Greece_logo.svg",
-        color: "from-blue-500 via-blue-400 to-white",
-        link: "https://www.slgr.gr/"
-    },
-    {
-        id: "dimayor",
-        name: "Colombia Primera A Finalizacion",
-        shortName: "COL",
-        icon: "fa-coffee",
-        logoUrl: "https://upload.wikimedia.org/wikipedia/en/8/8f/Dimayor_logo.svg",
-        color: "from-yellow-400 via-blue-600 to-red-600",
-        link: "https://dimayor.com.co/"
-    },
-    {
-        id: "efl-champ",
-        name: "English Football League Championship",
-        shortName: "EFL",
-        icon: "fa-medal",
-        logoUrl: "https://upload.wikimedia.org/wikipedia/en/0/07/EFL_Championship.svg",
-        color: "from-blue-900 to-slate-700",
-        link: "https://www.efl.com/"
-    },
-    {
-        id: "laliga-2",
-        name: "Spanish Segunda Division",
-        shortName: "ESP 2",
-        icon: "fa-bolt",
-        logoUrl: "https://upload.wikimedia.org/wikipedia/commons/0/0f/LaLiga_logo_2023.svg",
-        color: "from-orange-600 to-slate-800",
-        link: "https://www.laliga.com/en-GB/laliga-hypermotion"
+        id: "worldcup",
+        name: "FIFA World Cup",
+        shortName: "World Cup",
+        icon: "fa-earth-americas",
+        logoUrl: "https://upload.wikimedia.org/wikipedia/commons/a/aa/FIFA_World_Cup_2026_logo.svg",
+        color: "from-blue-950 via-slate-900 to-black",
+        link: "https://www.fifa.com/en/tournaments/mens/worldcup"
     }
 ] as const;
 
@@ -320,47 +185,44 @@ const LeagueItem: React.FC<{ league: LeagueConfig }> = ({ league }) => {
 const StreamPlayer: React.FC = () => {
     const handleWatch = () => window.open(HOT_MATCH_LINK, '_blank');
     return (
-        <IntelligenceFrame>
-            <div className="relative w-full h-[35vh] md:h-[50vh] bg-slate-950/60 backdrop-blur-md overflow-hidden group rounded-[1.8rem] md:rounded-[2.5rem] border border-white/10 flex flex-col items-center justify-center">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(var(--primary-rgb),0.1),transparent_70%)]"></div>
-                
-                <div className="relative z-10 w-full max-w-2xl px-6 md:px-8 flex flex-col items-center text-center">
-                    <h1 className="text-white text-3xl md:text-6xl font-bold tracking-tight mb-2 md:mb-3 drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
-                        Watch For Free
-                    </h1>
-                    <p className="text-white/80 text-xs md:text-lg font-medium mb-8 md:mb-10 max-w-md drop-shadow-sm">
-                        Global HD Broadcast Stream
-                    </p>
+        <div className="relative w-full py-10 md:py-16 px-6 bg-slate-900/60 backdrop-blur-md overflow-hidden group rounded-[2.5rem] md:rounded-[3.5rem] border border-white/20 flex flex-col items-center justify-center shadow-[0_20px_50px_rgba(0,0,0,0.4)]">
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/30"></div>
+            
+            <div className="relative z-10 w-full max-w-2xl flex flex-col items-center text-center">
+                <h1 className="text-white text-3xl md:text-6xl font-bold tracking-tight mb-1 drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] leading-tight">
+                    Watch For Free
+                </h1>
+                <p className="text-white/80 text-xs md:text-lg font-medium mb-10 max-w-md drop-shadow-sm">
+                    Global HD Broadcast Stream
+                </p>
 
-                    <button 
-                        onClick={handleWatch}
-                        className="relative w-full max-w-sm md:max-w-md py-5 md:py-8 bg-[var(--primary-color)] rounded-[1.5rem] md:rounded-[2rem] flex items-center justify-center gap-4 md:gap-5 group/btn active:scale-95 transition-all duration-300 shadow-[0_0_40px_rgba(var(--primary-rgb),0.3)] hover:shadow-[0_0_60px_rgba(var(--primary-rgb),0.5)] overflow-hidden"
-                    >
-                        <div className="absolute inset-0 bg-white/20 opacity-0 group-hover/btn:opacity-100 transition-opacity"></div>
-                        <div className="relative z-10 flex items-center gap-3 md:gap-4">
-                            <i className="fa-solid fa-play text-black text-xl md:text-3xl"></i>
-                            <span className="text-black font-display font-black text-xl md:text-3xl uppercase tracking-wider">
-                                Stream Now
-                            </span>
-                        </div>
-                    </button>
+                <button 
+                    onClick={handleWatch}
+                    className="relative w-[90%] md:w-full max-w-sm md:max-w-md py-4 md:py-6 bg-[#39ff14] rounded-[1.5rem] md:rounded-[2rem] flex items-center justify-center gap-3 md:gap-5 group/btn active:scale-95 transition-all duration-300 shadow-[0_0_20px_rgba(57,255,20,0.3)] hover:shadow-[0_0_40px_rgba(57,255,20,0.5)] hover:scale-105 overflow-hidden border border-white/10"
+                >
+                    <div className="absolute inset-0 bg-white/20 opacity-0 group-hover/btn:opacity-100 transition-opacity"></div>
+                    <div className="relative z-10 flex items-center gap-3 md:gap-4">
+                        <i className="fa-solid fa-play text-black text-xl md:text-2xl"></i>
+                        <span className="text-black font-display font-black text-xl md:text-2xl uppercase tracking-wider">
+                            Stream Now
+                        </span>
+                    </div>
+                </button>
 
-                    <div className="mt-6 md:mt-8 flex items-center gap-4 md:gap-6 text-white/80 font-bold uppercase tracking-[0.2em] text-[9px] md:text-[10px]">
-                        <div className="flex items-center gap-2 md:gap-3">
-                            <i className="fa-solid fa-earth-americas text-xs md:text-sm"></i>
-                            All Regions
-                        </div>
-                        <div className="w-1 md:w-1.5 h-1 md:h-1.5 rounded-full bg-white/40"></div>
-                        <div className="flex items-center gap-2 md:gap-3">
-                            <i className="fa-solid fa-bolt text-xs md:text-sm"></i>
-                            Low Latency
-                        </div>
+                <div className="mt-8 flex items-center gap-4 text-white/90 font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs">
+                    <div className="flex items-center gap-2">
+                        <i className="fa-solid fa-earth-americas"></i>
+                        ALL REGIONS
+                    </div>
+                    <div className="w-1 md:w-1.5 h-1 md:h-1.5 rounded-full bg-white/50"></div>
+                    <div className="flex items-center gap-2">
+                        <i className="fa-solid fa-bolt"></i>
+                        LOW LATENCY
                     </div>
                 </div>
-
-                <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-[var(--primary-color)]/10 blur-[100px] rounded-full animate-pulse-fast"></div>
             </div>
-        </IntelligenceFrame>
+            <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-[var(--primary-color)]/20 blur-[100px] rounded-full animate-pulse-fast"></div>
+        </div>
     );
 };
 
@@ -891,25 +753,73 @@ const App: React.FC = () => {
 
             <main className="w-full mx-auto min-h-screen relative pb-20">
                 {activeTab === "live" && (
-                    <div className="animate-fade-in flex flex-col min-h-screen pb-32">
-                        <div className="pt-8 md:pt-10 px-4 md:px-8 pb-4 md:pb-6 flex items-center justify-between z-30 sticky top-0 bg-slate-900/30 backdrop-blur-2xl border-b border-white/10 shadow-lg">
+                    <div className="animate-fade-in flex flex-col min-h-screen pb-32 relative overflow-hidden bg-[radial-gradient(ellipse_at_top,#8CA4AD_0%,#465459_100%)]">
+                        {/* Background Container for Live Tab */}
+                        <div className="absolute inset-0 z-0 pointer-events-none flex items-center justify-center pt-24 overflow-hidden">
+                            {/* Glowing Maps / Rings */}
+                            <div className="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[180vw] h-[180vw] md:w-[90vw] md:h-[90vw] bg-[radial-gradient(circle_at_center,rgba(57,255,20,0.1),transparent_60%)] rounded-full flex items-center justify-center">
+                                <div className="absolute w-[80%] h-[80%] border inline-block border-[#39ff14]/40 rounded-full border-dashed animate-[spin_40s_linear_infinite] shadow-[0_0_30px_rgba(57,255,20,0.3)]"></div>
+                                <div className="absolute w-[60%] h-[60%] border inline-block border-[#00f2fe]/40 rounded-full animate-[spin_30s_linear_infinite_reverse] shadow-[0_0_20px_rgba(0,242,254,0.3)]"></div>
+                                <div className="absolute w-[40%] h-[40%] border-2 inline-block border-[#39ff14]/20 rounded-full animate-[spin_20s_linear_infinite] shadow-[0_0_40px_rgba(57,255,20,0.2)]"></div>
+                            </div>
+                            
+                            {/* Globe wireframe effect in background */}
+                            <div className="absolute top-[35%] opacity-[0.15] bg-[url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/World_map_blank_with_blue_sea.svg/1000px-World_map_blank_with_blue_sea.svg.png')] bg-contain bg-no-repeat bg-center w-[150%] h-[80vh] mix-blend-screen mix-blend-color-dodge filter brightness-150 contrast-150"></div>
+
+                            {/* The realistic Trophy */}
+                            <div className="absolute top-[5%] h-[95vh] w-full flex flex-col items-center justify-end md:justify-center pointer-events-none perspective-[1000px] z-10">
+                                <img 
+                                    src="https://static.vecteezy.com/system/resources/previews/016/516/619/original/fifa-world-cup-trophy-icon-on-transparent-background-free-png.png" 
+                                    className="h-full object-contain filter drop-shadow-[0_0_50px_rgba(255,215,0,0.6)] contrast-125 saturate-150 brightness-110 animate-[spin-y_15s_linear_infinite]"
+                                    alt="World Cup Trophy" 
+                                    onError={(e) => { e.currentTarget.src = "https://cdn-icons-png.flaticon.com/512/3112/3112946.png" }}
+                                />
+                            </div>
+                            
+                            {/* Falling Confetti Layer - gold and silver mix */}
+                            <div className="absolute inset-0 z-20 overflow-hidden">
+                                {[...Array(40)].map((_, i) => {
+                                    const delay = (i * 0.5) % 10;
+                                    const duration = 10 + (i % 5);
+                                    const left = (i * 7) % 100;
+                                    return (
+                                        <div 
+                                            key={i} 
+                                            className={`absolute w-3 h-5 ${i % 2 === 0 ? 'bg-yellow-400' : 'bg-slate-200'} opacity-80 shadow-md`}
+                                            style={{
+                                                left: `${left}%`,
+                                                top: `-10%`,
+                                                animation: `fall ${duration}s linear infinite`,
+                                                animationDelay: `${delay}s`
+                                            }}
+                                        ></div>
+                                    );
+                                })}
+                            </div>
+                        </div>
+
+                        <div className="pt-8 md:pt-10 px-4 md:px-8 pb-4 md:pb-6 flex items-center justify-between z-30 sticky top-0 bg-transparent">
                             <div className="flex items-center gap-3 md:gap-4">
-                                <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-slate-900 flex items-center justify-center text-[var(--primary-color)] font-display font-black italic text-2xl md:text-3xl shadow-xl border border-white/10">O</div>
+                                <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-black flex items-center justify-center text-[var(--primary-color)] font-display font-black italic text-2xl md:text-3xl shadow-xl">O</div>
                                 <span className="font-display font-black text-2xl md:text-3xl text-slate-900 uppercase tracking-tighter drop-shadow-sm">Opta<span className="text-slate-600">TV</span></span>
                             </div>
-                            <a href="https://www.livescore.com/en/" target="_blank" rel="noreferrer" className="bg-slate-950 text-[var(--primary-color)] px-4 md:px-6 py-2 md:py-3 rounded-lg md:rounded-xl font-display text-sm md:text-xl font-black uppercase tracking-widest hover:brightness-125 transition-all shadow-2xl border border-white/5">LIVESCORE</a>
+                            <a href="https://www.livescore.com/en/" target="_blank" rel="noreferrer" className="bg-slate-950 text-[var(--primary-color)] px-4 md:px-6 py-2 md:py-3 rounded-lg md:rounded-xl font-display text-sm md:text-xl font-black uppercase tracking-widest transition-all shadow-[0_0_15px_rgba(57,255,20,0.3)] border border-[#39ff14]">LIVESCORE</a>
                         </div>
                         
-                        <div className="flex-1 px-4 md:px-6 mt-6 md:mt-8">
+                        <div className="flex-1 px-4 md:px-6 mt-6 md:mt-8 z-20">
                             <StreamPlayer />
                         </div>
                         
-                        <div className="mt-8 px-4 md:px-6 pb-4">
-                            <IntelligenceFrame title="Featured Competitions" icon="fa-trophy">
-                                <div className="flex gap-4 md:gap-5 overflow-x-auto no-scrollbar pb-2 px-1">
+                        <div className="mt-8 px-4 md:px-6 pb-4 z-20">
+                            <div className="w-full py-8 px-6 bg-slate-900/60 backdrop-blur-xl rounded-[2.5rem] md:rounded-[3.5rem] border border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.4)]">
+                                <div className="flex items-center justify-center gap-3 mb-8">
+                                    <i className="fa-solid fa-trophy text-[#39ff14]"></i>
+                                    <h3 className="text-white font-bold uppercase tracking-[0.2em] text-xs">Featured Competitions</h3>
+                                </div>
+                                <div className="flex gap-4 md:gap-5 overflow-x-auto no-scrollbar pb-2 px-4 md:px-1">
                                     {COMPETITIONS.map((league) => <LeagueItem key={league.id} league={league} />)}
                                 </div>
-                            </IntelligenceFrame>
+                            </div>
                         </div>
                     </div>
                 )}
@@ -918,7 +828,7 @@ const App: React.FC = () => {
                 {activeTab === "settings" && <SettingsTab />}
             </main>
 
-            <nav className="fixed bottom-6 left-5 right-5 md:left-6 md:right-6 z-50 bg-slate-900/80 backdrop-blur-3xl border border-white/10 h-20 md:h-24 rounded-[2rem] md:rounded-[2.5rem] shadow-[0_10px_50px_rgba(0,0,0,0.5)] flex items-center justify-around px-2">
+            <nav className="fixed bottom-6 left-5 right-5 md:left-6 md:right-6 z-50 bg-slate-900/90 backdrop-blur-3xl border border-white/10 h-[5.5rem] md:h-24 rounded-[2rem] md:rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.6)] flex items-center justify-around px-2">
                 {[
                     { id: 'live', icon: 'fa-tv', label: 'LIVE' },
                     { id: 'news', icon: 'fa-newspaper', label: 'NEWS' }, 
@@ -928,10 +838,10 @@ const App: React.FC = () => {
                     <button 
                         key={item.id} 
                         onClick={() => setActiveTab(item.id as View)} 
-                        className={`flex flex-col items-center justify-center w-16 md:w-20 h-14 md:h-16 rounded-xl md:rounded-2xl transition-all duration-500 relative group ${activeTab === item.id ? "text-black bg-[var(--primary-color)] scale-110 shadow-[0_0_40px_rgba(var(--primary-rgb),0.4)]" : "text-white/60 hover:text-white"}`}
+                        className={`flex flex-col items-center justify-center w-[4.5rem] md:w-[5.5rem] h-[4.5rem] md:h-[5.5rem] rounded-[1.3rem] md:rounded-2xl transition-all duration-300 relative group ${activeTab === item.id ? "text-black bg-[#39ff14] shadow-[0_0_25px_rgba(57,255,20,0.4)] border border-[#39ff14]/40" : "text-white/50 hover:text-white bg-transparent"}`}
                     >
-                        <i className={`fa-solid ${item.icon} text-xl md:text-2xl mb-1 group-hover:scale-105 transition-transform`}></i>
-                        <span className="text-[7px] md:text-[8px] font-black uppercase tracking-[0.2em]">{item.label}</span>
+                        <i className={`fa-solid ${item.icon} text-[1.4rem] md:text-2xl mb-1.5 transition-transform ${activeTab === item.id ? 'scale-110 drop-shadow-sm' : 'group-hover:scale-110'}`}></i>
+                        <span className="text-[10px] md:text-xs font-black uppercase tracking-wider">{item.label}</span>
                     </button>
                 ))}
             </nav>
